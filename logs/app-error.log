@@ -1,0 +1,46 @@
+ERROR | 15-04-2022 23:36:20 | server.Server - Connection timed out. Reconnect!
+ERROR | 16-04-2022 04:23:37 | utility.CollectionFileManager - Boot file system variable not found!
+ERROR | 16-04-2022 04:24:37 | server.Server - Connection timed out. Reconnect!
+ERROR | 16-04-2022 04:38:06 | utility.CollectionFileManager - The correct collection was not found in the boot file!
+ERROR | 16-04-2022 14:29:32 | utility.CollectionFileManager - Boot file system variable not found!
+ERROR | 16-04-2022 14:29:45 | utility.CollectionFileManager - The correct collection was not found in the boot file!
+ERROR | 16-04-2022 14:30:32 | server.Server - Connection timed out. Reconnect!
+ERROR | 16-04-2022 14:45:58 | utility.CollectionFileManager - Boot file system variable not found!
+ERROR | 16-04-2022 14:46:47 | utility.CollectionFileManager - Boot file system variable not found!
+ERROR | 16-04-2022 14:48:46 | utility.CollectionFileManager - The correct collection was not found in the boot file!
+ERROR | 16-04-2022 15:02:19 | utility.CollectionFileManager - The correct collection was not found in the boot file!
+ERROR | 16-04-2022 15:05:24 | utility.CollectionFileManager - The correct collection was not found in the boot file!
+ERROR | 16-04-2022 15:05:57 | utility.CollectionFileManager - The correct collection was not found in the boot file!
+ERROR | 16-04-2022 15:06:57 | server.Server - Connection timed out. Reconnect!
+ERROR | 16-04-2022 15:12:18 | utility.CollectionFileManager - The correct collection was not found in the boot file!
+ERROR | 16-04-2022 15:13:18 | server.Server - Connection timed out. Reconnect!
+ERROR | 16-04-2022 15:14:34 | utility.CollectionFileManager - The correct collection was not found in the boot file!
+ERROR | 16-04-2022 18:55:05 | server.Server - Connection timed out. Reconnect!
+ERROR | 16-04-2022 19:22:33 | server.Server - Connection timed out. Reconnect!
+ERROR | 16-04-2022 19:23:57 | server.Server - Connection timed out. Reconnect!
+ERROR | 16-04-2022 19:29:29 | server.Server - Connection timed out. Reconnect!
+ERROR | 16-04-2022 19:54:55 | server.Server - Connection timed out. Reconnect!
+ERROR | 16-04-2022 21:30:37 | server.Server - Connection timed out. Reconnect!
+ERROR | 16-04-2022 23:34:16 | utility.CollectionFileManager - The correct collection was not found in the boot file!
+ERROR | 16-04-2022 23:35:11 | server.Server - Unexpected termination of connection with the client!
+ERROR | 16-04-2022 23:36:03 | server.Server - Unexpected termination of connection with the client!
+ERROR | 17-04-2022 01:16:00 | utility.CollectionFileManager - The correct collection was not found in the boot file!
+ERROR | 17-04-2022 01:16:30 | server.Server - Unexpected termination of connection with the client!
+ERROR | 17-04-2022 01:17:30 | server.Server - Connection timed out. Reconnect!
+ERROR | 17-04-2022 01:27:08 | utility.CollectionFileManager - The correct collection was not found in the boot file!
+ERROR | 17-04-2022 01:30:49 | server.Server - Unexpected termination of connection with the client!
+ERROR | 17-04-2022 01:31:19 | server.Server - Unexpected termination of connection with the client!
+ERROR | 17-04-2022 01:32:22 | server.Server - Unexpected termination of connection with the client!
+ERROR | 17-04-2022 01:33:22 | server.Server - Connection timed out. Reconnect!
+ERROR | 17-04-2022 01:52:13 | utility.CollectionFileManager - The correct collection was not found in the boot file!
+ERROR | 17-04-2022 01:52:36 | server.Server - Unexpected termination of connection with the client!
+ERROR | 17-04-2022 01:53:36 | server.Server - Connection timed out. Reconnect!
+ERROR | 17-04-2022 01:55:39 | utility.CollectionFileManager - The correct collection was not found in the boot file!
+ERROR | 17-04-2022 01:55:47 | server.Server - Unexpected termination of connection with the client!
+ERROR | 17-04-2022 01:56:14 | server.Server - Unexpected termination of connection with the client!
+ERROR | 17-04-2022 01:57:14 | server.Server - Connection timed out. Reconnect!
+ERROR | 17-04-2022 13:20:58 | utility.CollectionFileManager - The correct collection was not found in the boot file!
+ERROR | 17-04-2022 13:22:22 | utility.CollectionFileManager - The correct collection was not found in the boot file!
+ERROR | 17-04-2022 13:23:22 | server.Server - Connection timed out. Reconnect!
+ERROR | 18-04-2022 22:25:43 | server.Server - Connection timed out. Reconnect!
+ERROR | 18-04-2022 22:31:24 | server.Server - Connection timed out. Reconnect!
