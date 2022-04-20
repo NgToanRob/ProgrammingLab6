@@ -11,8 +11,6 @@ public class App {
         private static final int RECONNECTION_TIMEOUT = 5 * 1000;
         private static final int MAX_RECONNECTION_ATTEMPTS = 5;
 
-        // private static String host;
-        // private static int port;
         private static String host;
         private static int port ;
 

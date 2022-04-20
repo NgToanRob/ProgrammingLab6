@@ -12,7 +12,7 @@ public class AverageOfAnnualTurnoverCommand extends AbstractCommand {
     private CollectionManager collectionManager;
 
     public AverageOfAnnualTurnoverCommand(CollectionManager collectionManager) {
-        super("average_of_annual_turnover", "{element}" ,"read and execute the script from the specified file");
+        super("average_of_annual_turnover", "" ,"read and execute the script from the specified file");
         this.collectionManager = collectionManager;
     }
 

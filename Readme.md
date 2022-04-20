@@ -60,7 +60,7 @@ save                                 save collection to file
 exit                                 terminate program (without saving to file)
 execute_script <file_name>           execute script from specified file
 add_if_min {element}                 update the value of the collection element whose id is equal to the given one
-remove_greater {element}             remove from the collection all elements greater than the specified
+remove_lower {element}             remove from the collection all elements greater than the specified
 history                              display history of used commands
 average_of_annual_turnover           read and execute the script from the specified file
 count_greater_than_official_address  print the number of elements whose officialAddress field value is greater than the specified one

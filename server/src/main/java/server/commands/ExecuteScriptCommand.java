@@ -9,7 +9,7 @@ import server.utility.ResponseOutputer;
  */
 public class ExecuteScriptCommand extends AbstractCommand {
     public ExecuteScriptCommand() {
-        super("execute_script <file_name>", "{element}","execute script from specified file");
+        super("execute_script <file_name>", "","execute script from specified file");
     }
 
     /**

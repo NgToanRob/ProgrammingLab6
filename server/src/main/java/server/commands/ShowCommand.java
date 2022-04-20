@@ -11,7 +11,7 @@ public class ShowCommand extends AbstractCommand {
     private CollectionManager collectionManager;
 
     public ShowCommand(CollectionManager collectionManager) {
-        super("show", "{element}","display all items in the collection");
+        super("show", "","display all items in the collection");
         this.collectionManager = collectionManager;
     }
 

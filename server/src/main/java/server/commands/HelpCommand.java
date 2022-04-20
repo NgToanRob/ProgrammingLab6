@@ -9,7 +9,7 @@ import server.utility.ResponseOutputer;
 public class HelpCommand extends AbstractCommand {
 
     public HelpCommand() {
-        super("help", "{element}","display help on available commands");
+        super("help", "","display help on available commands");
 
     }
 

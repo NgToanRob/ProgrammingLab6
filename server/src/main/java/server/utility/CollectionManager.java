@@ -8,6 +8,9 @@ import exceptions.CollectionIsEmptyException;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
 
 /**
  * Operates the collection itself.
@@ -82,6 +85,10 @@ public class CollectionManager {
         return organizationCollection.stream().findFirst().orElse(null);
     }
 
+    public Organization getMinimun() {
+        return Collections.min(organizationCollection);
+    }
+
     /**
      * @param id ID of the organization.
      * @return An organization by his ID or null if organization isn't found.
@@ -147,14 +154,14 @@ public class CollectionManager {
     public void removeFromCollection(Organization organization) {
         organizationCollection.remove(organization);
     }
-
+    
     /**
      * Clears the collection.
      */
     public void clearCollection() {
         organizationCollection.clear();
     }
-
+    
     /**
      * Generates next ID. It will be (the bigger one + 1).
      *
@@ -163,6 +170,17 @@ public class CollectionManager {
     public Long generateNextId() {
         if (organizationCollection.isEmpty()) return 1L;
         return organizationCollection.get(collectionSize() - 1).getId() + 1;
+    }
+
+    /**
+     * Sort the organizationCollection by the id field.
+     */
+    public void sortById() {
+        Collections.sort(organizationCollection, new Comparator<Organization>(){
+            public int compare(Organization o1, Organization o2){
+                return ((Long) o1.getId()).compareTo((Long) o2.getId());
+            }
+        });
     }
 
     /**
@@ -223,6 +241,7 @@ public class CollectionManager {
         }
         return count;
     }
+
 
 //    /**
 //     * Get all the organizations contains given type

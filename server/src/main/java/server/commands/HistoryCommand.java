@@ -9,7 +9,7 @@ import server.utility.ResponseOutputer;
 public class HistoryCommand extends AbstractCommand {
 
     public HistoryCommand() {
-        super("history", "{element}","display history of used commands");
+        super("history", "","display history of used commands");
     }
 
     /**

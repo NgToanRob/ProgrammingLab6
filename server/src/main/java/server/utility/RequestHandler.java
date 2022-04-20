@@ -84,7 +84,7 @@ public class RequestHandler {
                 if (!commandManager.addIfMin(commandStringArgument, commandObjectArgument))
                     return ResponseCode.ERROR;
                 break;
-            case "remove_greater":
+            case "remove_lower":
                 if (!commandManager.removeLower(commandStringArgument, commandObjectArgument))
                     return ResponseCode.ERROR;
                 break;

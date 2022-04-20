@@ -44,3 +44,25 @@ ERROR | 17-04-2022 13:22:22 | utility.CollectionFileManager - The correct collec
 ERROR | 17-04-2022 13:23:22 | server.Server - Connection timed out. Reconnect!
 ERROR | 18-04-2022 22:25:43 | server.Server - Connection timed out. Reconnect!
 ERROR | 18-04-2022 22:31:24 | server.Server - Connection timed out. Reconnect!
+ERROR | 20-04-2022 00:02:35 | utility.CollectionFileManager - The correct collection was not found in the boot file!
+ERROR | 20-04-2022 00:13:17 | server.Server - Connection timed out. Reconnect!
+ERROR | 20-04-2022 00:21:40 | server.Server - Connection timed out. Reconnect!
+ERROR | 20-04-2022 00:29:40 | server.Server - Connection timed out. Reconnect!
+ERROR | 20-04-2022 00:37:57 | server.Server - Connection timed out. Reconnect!
+ERROR | 20-04-2022 00:41:44 | server.Server - Unexpected termination of connection with the client!
+ERROR | 20-04-2022 00:42:44 | server.Server - Connection timed out. Reconnect!
+ERROR | 20-04-2022 01:09:25 | server.Server - Unexpected termination of connection with the client!
+ERROR | 20-04-2022 01:09:30 | server.Server - Unexpected termination of connection with the client!
+ERROR | 20-04-2022 01:22:37 | server.Server - Connection timed out. Reconnect!
+ERROR | 20-04-2022 21:00:15 | server.Server - Connection timed out. Reconnect!
+ERROR | 20-04-2022 21:02:22 | server.Server - Unexpected termination of connection with the client!
+ERROR | 20-04-2022 21:03:08 | server.Server - An error occurred while sending data to the client!
+ERROR | 20-04-2022 21:04:15 | server.Server - Unexpected termination of connection with the client!
+ERROR | 20-04-2022 21:05:15 | server.Server - Connection timed out. Reconnect!
+ERROR | 20-04-2022 21:23:57 | server.Server - Unexpected termination of connection with the client!
+ERROR | 20-04-2022 21:24:05 | server.Server - An error occurred while sending data to the client!
+ERROR | 20-04-2022 21:24:17 | server.Server - Unexpected termination of connection with the client!
+ERROR | 20-04-2022 21:25:18 | server.Server - Connection timed out. Reconnect!
+ERROR | 20-04-2022 22:08:03 | server.Server - Unexpected termination of connection with the client!
+ERROR | 20-04-2022 22:18:11 | server.Server - Unexpected termination of connection with the client!
+ERROR | 20-04-2022 22:32:06 | server.Server - Unexpected termination of connection with the client!

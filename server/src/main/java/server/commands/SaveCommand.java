@@ -11,7 +11,7 @@ public class SaveCommand extends AbstractCommand {
     private CollectionManager collectionManager;
 
     public SaveCommand(CollectionManager collectionManager) {
-        super("save", "{element}","save collection to file");
+        super("save", "","save collection to file");
         this.collectionManager = collectionManager;
     }
 

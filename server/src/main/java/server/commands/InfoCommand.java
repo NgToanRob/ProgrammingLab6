@@ -13,7 +13,7 @@ public class InfoCommand extends AbstractCommand {
     private CollectionManager collectionManager;
 
     public InfoCommand(CollectionManager collectionManager) {
-        super("info", "{element}",
+        super("info", "",
                 "print information about the collection to standard output (type, initialization date, number of elements, etc.)");
         this.collectionManager = collectionManager;
     }

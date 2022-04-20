@@ -94,15 +94,13 @@ public class UserHandler {
                     throw new IncorrectInputInScriptException();
 
                 switch (processingCode) {
-                    case OBJECT -> {
+                    case OBJECT:
                         OrganizationPack organizationAddPack = generateOrganizationAdd();
                         return new Request(userCommand[0], userCommand[1], organizationAddPack);
-                    }
-                    case UPDATE_OBJECT -> {
+                    case UPDATE_OBJECT:
                         OrganizationPack organizationUpdatePack = generateOrganizationUpdate();
                         return new Request(userCommand[0], userCommand[1], organizationUpdatePack);
-                    }
-                    case SCRIPT -> {
+                case SCRIPT:
                         File scriptFile = new File(userCommand[1]);
                         if (!scriptFile.exists()) throw new FileNotFoundException();
                         if (!scriptStack.isEmpty() && scriptStack.search(scriptFile) != -1)
@@ -111,7 +109,6 @@ public class UserHandler {
                         scriptStack.push(scriptFile);
                         userScanner = new Scanner(scriptFile);
                         Outputer.println("Executing a script '" + scriptFile.getName() + "'...");
-                    }
                 }
             } catch (FileNotFoundException exception) {
                 Outputer.printError("Script file not found!");
@@ -233,13 +230,13 @@ public class UserHandler {
         if (fileMode()) asker.setFileMode();
         String name = asker.askQuestion("Do you want to change the organization's name?") ?
                 asker.askName() : null;
-        Coordinates coordinates = asker.askQuestion("Do youw want to change the organization's coordinates") ?
+        Coordinates coordinates = asker.askQuestion("Do you want to change the organization's coordinates") ?
                 asker.askCoordinates() : null;
         long annualTurnover = asker.askQuestion("Do you want to change the organization's annual turnover") ?
-                asker.askAnnualTurnover() : null;
+                asker.askAnnualTurnover() : -1; // annualTurnover always >= 0, so -1 is a bad value
         OrganizationType type = asker.askQuestion("Do you want to change the organization's type?") ?
                 asker.askOrganizationType() : null;
-        Address address =  asker.askQuestion("Do you want to change the organization's offical address?") ?
+        Address address =  asker.askQuestion("Do you want to change the organization's official address?") ?
                 asker.askOfficialAddress() : null;
         return new OrganizationPack(
                 name,

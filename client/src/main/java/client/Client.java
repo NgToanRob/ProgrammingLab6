@@ -107,6 +107,7 @@ public class Client {
                 if (requestToServer.isEmpty()) continue;
 
                 serverWriter.writeObject(requestToServer);
+
                 serverResponse = (Response) serverReader.readObject();
                 Outputer.print(serverResponse.getResponseBody());
 

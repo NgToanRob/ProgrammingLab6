@@ -20,7 +20,7 @@ public class UpdateCommand extends AbstractCommand {
     private CollectionManager collectionManager;
 
     public UpdateCommand(CollectionManager collectionManager) {
-        super("update <ID> {element}", "{element}","update the value of the collection element whose id is equal to the given one");
+        super("update <ID> ", "","update the value of the collection element whose id is equal to the given one");
         this.collectionManager = collectionManager;
     }
 
@@ -71,6 +71,7 @@ public class UpdateCommand extends AbstractCommand {
                     annualTurnover,
                     type,
                     address));
+            collectionManager.sortById();
             ResponseOutputer.appendln("Organization successfully changed!");
             return true;
         } catch (WrongAmountOfElementsException exception) {

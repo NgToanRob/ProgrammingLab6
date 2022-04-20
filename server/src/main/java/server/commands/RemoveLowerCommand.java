@@ -10,13 +10,13 @@ import server.utility.ResponseOutputer;
 import data.Organization;
 
 /**
- * Command 'remove_greater'. Removes elements greater than user entered.
+ * Command 'remove_lower'. Removes elements greater than user entered.
  */
 public class RemoveLowerCommand extends AbstractCommand {
     private CollectionManager collectionManager;
 
     public RemoveLowerCommand(CollectionManager collectionManager) {
-        super("remove_greater {element}", "{element}","remove from the collection all elements greater than the specified");
+        super("remove_lower ", "{element}","remove from the collection all elements greater than the specified");
         this.collectionManager = collectionManager;
     }
 

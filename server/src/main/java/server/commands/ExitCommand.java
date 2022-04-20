@@ -9,7 +9,7 @@ import server.utility.ResponseOutputer;
 public class ExitCommand extends AbstractCommand {
 
     public ExitCommand() {
-        super("exit","{element}" ,"terminate program (without saving to file)");
+        super("exit","" ,"terminate program (without saving to file)");
     }
 
     /**

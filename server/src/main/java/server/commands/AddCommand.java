@@ -16,7 +16,7 @@ public class AddCommand extends AbstractCommand {
     private CollectionManager collectionManager;
 
     public AddCommand(CollectionManager collectionManager) {
-        super("add {element}", "{element}", "add a new element to the collection");
+        super("add", "{element}", "add a new element to the collection");
         this.collectionManager = collectionManager;
     }
 

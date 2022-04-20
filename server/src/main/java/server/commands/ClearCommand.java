@@ -11,7 +11,7 @@ public class ClearCommand extends AbstractCommand {
     private CollectionManager collectionManager;
 
     public ClearCommand(CollectionManager collectionManager) {
-        super("clear","{element}" ,"clear the collection");
+        super("clear","" ,"clear the collection");
         this.collectionManager = collectionManager;
     }
 

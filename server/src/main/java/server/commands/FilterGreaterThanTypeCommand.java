@@ -14,7 +14,7 @@ public class FilterGreaterThanTypeCommand extends AbstractCommand {
 
     public FilterGreaterThanTypeCommand(CollectionManager collectionManager) {
         super("filter_greater_than_type  <OrganizationType>",
-                "{element}",
+                "",
                 "display elements whose organization type field value is equal to the given one");
         this.collectionManager = collectionManager;
     }

@@ -16,7 +16,7 @@ public class AddIfMinCommand extends AbstractCommand {
     private CollectionManager collectionManager;
 
     public AddIfMinCommand(CollectionManager collectionManager) {
-        super("add_if_min {element}","{element}" ,"update the value of the collection element whose id is equal to the given one");
+        super("add_if_min","{element}" ,"update the value of the collection element whose id is equal to the given one");
         this.collectionManager = collectionManager;
     }
 
@@ -43,7 +43,7 @@ public class AddIfMinCommand extends AbstractCommand {
                     organizationPack.getOfficialAddress());
 
             if (collectionManager.collectionSize() == 0
-                    || organizationToAdd.compareTo(collectionManager.getFirst()) < 0) {
+                    || organizationToAdd.compareTo(collectionManager.getMinimun()) < 0) {
                 collectionManager.addToCollection(organizationToAdd);
                 ResponseOutputer.appendln("Organization added successfully!");
                 return true;
