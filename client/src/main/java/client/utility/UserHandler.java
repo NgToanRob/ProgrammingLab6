@@ -100,7 +100,10 @@ public class UserHandler {
                     case UPDATE_OBJECT:
                         OrganizationPack organizationUpdatePack = generateOrganizationUpdate();
                         return new Request(userCommand[0], userCommand[1], organizationUpdatePack);
-                case SCRIPT:
+                    case ADDRESS:
+                        Address officialAddressPack = generateOfficialAddress();
+                        return new Request(userCommand[0], userCommand[1], officialAddressPack);
+                    case SCRIPT:
                         File scriptFile = new File(userCommand[1]);
                         if (!scriptFile.exists()) throw new FileNotFoundException();
                         if (!scriptStack.isEmpty() && scriptStack.search(scriptFile) != -1)
@@ -128,6 +131,7 @@ public class UserHandler {
         return new Request(userCommand[0], userCommand[1]);
     }
 
+    
     /**
      * Processes the entered command.
      *
@@ -137,9 +141,9 @@ public class UserHandler {
         try {
             switch (command) {
                 case "":
-                    return ProcessingCode.ERROR;
+                return ProcessingCode.ERROR;
                 case "help":
-                    if (!commandArgument.isEmpty()) throw new CommandUsageException();
+                if (!commandArgument.isEmpty()) throw new CommandUsageException();
                     break;
                 case "info":
                     if (!commandArgument.isEmpty()) throw new CommandUsageException();
@@ -159,16 +163,16 @@ public class UserHandler {
                 case "clear":
                     if (!commandArgument.isEmpty()) throw new CommandUsageException();
                     break;
-                case "save":
-                    if (!commandArgument.isEmpty()) throw new CommandUsageException();
-                    break;
+                // case "save":
+                //     if (!commandArgument.isEmpty()) throw new CommandUsageException();
+                //     break;
                 case "execute_script":
                     if (commandArgument.isEmpty()) throw new CommandUsageException("<file_name>");
                     return ProcessingCode.SCRIPT;
-                case "exit":
+                    case "exit":
                     if (!commandArgument.isEmpty()) throw new CommandUsageException();
                     break;
-                case "add_if_min":
+                    case "add_if_min":
                     if (!commandArgument.isEmpty()) throw new CommandUsageException("{element}");
                     return ProcessingCode.OBJECT;
                 case "remove_lower":
@@ -179,7 +183,7 @@ public class UserHandler {
                     break;
                 case "count_greater_than_official_address":
                     if (!commandArgument.isEmpty()) throw new CommandUsageException("<official_address>");
-                    break;
+                    return ProcessingCode.ADDRESS;
                 case "average_of_annual_turnover":
                     if (!commandArgument.isEmpty()) throw new CommandUsageException();
                     break;
@@ -190,8 +194,8 @@ public class UserHandler {
                     if (!commandArgument.isEmpty()) throw new CommandUsageException();
                     break;
                 default:
-                    Outputer.println("Command '" + command + "'does not found. Type 'help' for help.");
-                    return ProcessingCode.ERROR;
+                Outputer.println("Command '" + command + "'does not found. Type 'help' for help.");
+                return ProcessingCode.ERROR;
             }
         } catch (CommandUsageException exception) {
             if (exception.getMessage() != null) command += " " + exception.getMessage();
@@ -200,7 +204,7 @@ public class UserHandler {
         }
         return ProcessingCode.OK;
     }
-
+    
     /**
      * Generates marine to add.
      *
@@ -211,14 +215,14 @@ public class UserHandler {
         Asker asker = new Asker(userScanner);
         if (fileMode()) asker.setFileMode();
         return new OrganizationPack(
-                asker.askName(),
-                asker.askCoordinates(),
+            asker.askName(),
+            asker.askCoordinates(),
                 asker.askAnnualTurnover(),
                 asker.askOrganizationType(),
                 asker.askOfficialAddress()
         );
     }
-
+    
     /**
      * Generates marine to update.
      *
@@ -229,16 +233,16 @@ public class UserHandler {
         Asker asker = new Asker(userScanner);
         if (fileMode()) asker.setFileMode();
         String name = asker.askQuestion("Do you want to change the organization's name?") ?
-                asker.askName() : null;
+        asker.askName() : null;
         Coordinates coordinates = asker.askQuestion("Do you want to change the organization's coordinates") ?
                 asker.askCoordinates() : null;
         long annualTurnover = asker.askQuestion("Do you want to change the organization's annual turnover") ?
-                asker.askAnnualTurnover() : -1; // annualTurnover always >= 0, so -1 is a bad value
+        asker.askAnnualTurnover() : -1; // annualTurnover always >= 0, so -1 is a bad value
         OrganizationType type = asker.askQuestion("Do you want to change the organization's type?") ?
                 asker.askOrganizationType() : null;
         Address address =  asker.askQuestion("Do you want to change the organization's official address?") ?
                 asker.askOfficialAddress() : null;
-        return new OrganizationPack(
+                return new OrganizationPack(
                 name,
                 coordinates,
                 annualTurnover,
@@ -247,7 +251,12 @@ public class UserHandler {
         );
         // Need to handle filed not allow null value
     }
-
+    private Address generateOfficialAddress() throws IncorrectInputInScriptException {
+        Asker asker = new Asker(userScanner);
+        if (fileMode()) asker.setFileMode();
+        return new Address(asker.askStreet(), asker.askZipCode());
+    }
+    
     /**
      * Checks if UserHandler is in file mode now.
      *

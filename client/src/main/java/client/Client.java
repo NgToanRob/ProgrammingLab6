@@ -3,7 +3,6 @@ package client;
 import client.utility.UserHandler;
 import exceptions.ConnectionErrorException;
 import exceptions.NotInDeclaredLimitsException;
-import exceptions.WrongAmountOfElementsException;
 import interaction.Request;
 import interaction.Response;
 import utility.Outputer;
@@ -97,8 +96,8 @@ public class Client {
      * Server request process.
      */
     private boolean processRequestToServer() {
-        Request requestToServer = null; // ????
-        Response serverResponse = null; // ????
+        Request requestToServer = null; 
+        Response serverResponse = null; 
         do {
             try {
                 requestToServer = serverResponse != null ?

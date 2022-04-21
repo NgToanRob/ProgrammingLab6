@@ -43,7 +43,7 @@ public class AddIfMinCommand extends AbstractCommand {
                     organizationPack.getOfficialAddress());
 
             if (collectionManager.collectionSize() == 0
-                    || organizationToAdd.compareTo(collectionManager.getMinimun()) < 0) {
+                    || organizationToAdd.compareTo(collectionManager.getMinimum()) < 0) {
                 collectionManager.addToCollection(organizationToAdd);
                 ResponseOutputer.appendln("Organization added successfully!");
                 return true;

@@ -39,7 +39,7 @@ public class CollectionFileManager {
         if (filePath != null) {
             try (FileWriter collectionFileWriter = new FileWriter(filePath)) {
                 collectionFileWriter.write((gson.toJson(collection)));
-                ResponseOutputer.appendln("Collection successfully saved to file.");
+                ResponseOutputer.appendln("Collection autosaved to file.");
             } catch (IOException exception) {
                 ResponseOutputer.appendError("The download file is a directory/cannot be opened!");
             }

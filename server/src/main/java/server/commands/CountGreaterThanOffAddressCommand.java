@@ -33,11 +33,12 @@ public class CountGreaterThanOffAddressCommand extends AbstractCommand {
     @Override
     public boolean execute(String stringArgument, Object objectArgument) {
         try {
-            if (!stringArgument.isEmpty() || objectArgument != null)
+            if (!stringArgument.isEmpty() || objectArgument == null)
                 throw new WrongAmountOfElementsException();
-            String anony = "aaaaa";
-            Address toCompare = new Address(stringArgument, anony);
-            ResponseOutputer.appendln(collectionManager.getCountGreaterThanOffAddress(toCompare));
+            Address addressPack = (Address) objectArgument;
+
+            ResponseOutputer.appendln("Number of elements whose officialAddress field value is greater than the given one: " 
+            + collectionManager.getCountGreaterThanOffAddress(addressPack));
             return true; // create Address from street and zipcode
 
         } catch (WrongAmountOfElementsException exception) {

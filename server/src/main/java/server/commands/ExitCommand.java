@@ -1,6 +1,7 @@
 package server.commands;
 
 import exceptions.WrongAmountOfElementsException;
+import server.utility.CollectionManager;
 import server.utility.ResponseOutputer;
 
 /**
@@ -8,8 +9,11 @@ import server.utility.ResponseOutputer;
  */
 public class ExitCommand extends AbstractCommand {
 
-    public ExitCommand() {
+    private CollectionManager collectionManager;
+
+    public ExitCommand(CollectionManager collectionManager) {
         super("exit","" ,"terminate program (without saving to file)");
+        this.collectionManager = collectionManager;
     }
 
     /**
@@ -24,6 +28,9 @@ public class ExitCommand extends AbstractCommand {
         try {
             if (!stringArgument.isEmpty() || objectArgument != null)
                 throw new WrongAmountOfElementsException();
+                
+            collectionManager.saveCollection();
+
             return true;
         } catch (WrongAmountOfElementsException exception) {
             ResponseOutputer.appendln("Using: '" + getName() + "'");

@@ -85,7 +85,7 @@ public class CollectionManager {
         return organizationCollection.stream().findFirst().orElse(null);
     }
 
-    public Organization getMinimun() {
+    public Organization getMinimum() {
         return Collections.min(organizationCollection);
     }
 

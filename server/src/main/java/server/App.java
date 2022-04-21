@@ -32,7 +32,7 @@ public class App {
                 new RemoveByIdCommand(collectionManager),
                 new ClearCommand(collectionManager),
                 new SaveCommand(collectionManager),
-                new ExitCommand(),
+                new ExitCommand(collectionManager),
                 new ExecuteScriptCommand(),
                 new AddIfMinCommand(collectionManager),
                 new RemoveLowerCommand(collectionManager),

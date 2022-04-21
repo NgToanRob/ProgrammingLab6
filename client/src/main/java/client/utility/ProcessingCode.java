@@ -9,5 +9,5 @@ public enum ProcessingCode {
     ERROR,
     OBJECT,
     UPDATE_OBJECT,
-    SCRIPT
+    SCRIPT, ADDRESS
 }
