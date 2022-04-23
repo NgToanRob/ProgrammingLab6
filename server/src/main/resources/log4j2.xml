@@ -3,7 +3,7 @@
     <!-- Logging Properties-->
     <Properties>
         <Property name = "LOG_PATTERN">%-5p | %d{dd-MM-yyyy HH:mm:ss} | %C{2} - %m%n</Property>
-        <Property name = "APP_LOG_ROOT">/home/mrtoan/Documents/Java/ProgrammingLab6/logs</Property>
+        <Property name = "APP_LOG_ROOT">../logs</Property>
     </Properties>
 
     <Appenders>

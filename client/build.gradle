@@ -15,7 +15,8 @@ jar {
     manifest {
         attributes 'Main-Class': 'client.App'
     }
-    from project(':utilities')
+    from project(":utilities")
+
 }
 
 version 'unspecified'

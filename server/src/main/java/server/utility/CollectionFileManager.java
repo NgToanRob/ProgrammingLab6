@@ -71,7 +71,7 @@ public class CollectionFileManager {
             }
             catch (IllegalStateException exception) {
                 Outputer.printError("Unexpected error!");
-                App.logger.fatal("Unexpected error!");
+                App.logger.error("Unexpected error!");
                 System.exit(0);
             } catch (NoSuchElementException exception){
                 ResponseOutputer.appendln("The collection is empty");

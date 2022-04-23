@@ -27,6 +27,8 @@ dependencies {
     // This dependency is used to log status
     implementation 'org.apache.logging.log4j:log4j-api:2.17.2'
     implementation 'org.apache.logging.log4j:log4j-core:2.17.2'
+    // https://mvnrepository.com/artifact/ch.qos.logback/logback-classic
+    implementation 'ch.qos.logback:logback-classic:1.2.3'
 
     // Gson
 //    implementation fileTree(dir: '../libs', include: '*.jar')

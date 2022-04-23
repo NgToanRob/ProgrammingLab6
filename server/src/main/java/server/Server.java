@@ -55,7 +55,7 @@ public class Server {
             stop();
         } catch (OpeningServerSocketException exception) {
             Outputer.printError("The server cannot be started!");
-            App.logger.fatal("The server cannot be started!");
+            App.logger.error("The server cannot be started!");
         }
     }
 
@@ -95,12 +95,12 @@ public class Server {
 
         } catch (IllegalArgumentException exception) {
             Outputer.printError("Port '" + port + "' is out of range!");
-            App.logger.fatal("Port '" + port + "' is out of range!");
+            App.logger.error("Port '" + port + "' is out of range!");
             throw new OpeningServerSocketException();
 
         } catch (IOException exception) {
             Outputer.printError("An error occurred while trying to use port " + port + "'!");
-            App.logger.fatal("An error occurred while trying to use port " + port + "'!");
+            App.logger.error("An error occurred while trying to use port " + port + "'!");
             throw new OpeningServerSocketException();
         }
     }
