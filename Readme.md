@@ -165,7 +165,7 @@ Collection autosaved to file.
 The client's work has been completed successfully.
 ```
 
-### 4.3 содержимое лог-файла
+### 4.3 Содержимое лог-файла
 ```
 INFO  | 25-04-2022 14:43:34 | [main] ServerLogger s.u.CollectionFileManager - Collection loaded successfully.
 INFO  | 25-04-2022 14:43:34 | [main] ServerLogger s.Server - Server start...
