@@ -1,7 +1,15 @@
+<p align="center" style ="font-size: 24px">Министерство образования и науки РФ
+</p>
+<p align="center" style ="font-size: 20px">Федеральное государственное автономное <br>
+образовательное учреждение высшего образования <br>
+«Национальный исследовательский университет ИТМО»
+</p>
+
+<p align="center" style ="font-size: 24px"><em>Факультет систем управления и робототехники </em></p>
+
 <p align="center">
   <img src="doc/Picture1.png" />
 </p>
-<p align="center" style ="font-size: 24px"><em>Факультет мехатроники и робототехники</em></p>
 
 <p align="center" style ="font-size: 24px"><strong>Лабораторная работа №6 </br>
 По дисциплине : «Программирование»</br>
